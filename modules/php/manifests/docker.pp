@@ -1,6 +1,7 @@
 class php::docker {
     docker::image { 'php:8.0-fpmX':
-      docker_file => '/vagrant/etc/php/Dockerfile'
+      docker_file => '/vagrant/etc/php/Dockerfile',
+      ensure  => $profile::web::status,
     }
     docker::run { "php":
       image   => "php:8.0-fpmX",
