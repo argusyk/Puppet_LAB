@@ -10,6 +10,6 @@ export PATH=$PATH:/opt/puppetlabs/puppet/bin
 gem install librarian-puppet
 puppet module install puppetlabs-docker
 ln -s $MODULES/* $MODULEPATH
-puppet apply --modulepath $MODULEPATH $MANIFESTFILE
+puppet apply --debug --modulepath $MODULEPATH $MANIFESTFILE
 
 
